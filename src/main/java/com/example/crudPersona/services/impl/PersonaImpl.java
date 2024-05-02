@@ -49,10 +49,12 @@ public class PersonaImpl implements IPersona {
 
     @Override
     public List<Persona> getPersonas() {
+        /*
         if(this.bd.getBaseDatos().size() <= 0){
             return new ArrayList<Persona>();//Devuelvo una lista vacia
         }else{
             return this.bd.getBaseDatos();
-        }
+        }*/
+        return this.bd.getBaseDatos();
     }
 }

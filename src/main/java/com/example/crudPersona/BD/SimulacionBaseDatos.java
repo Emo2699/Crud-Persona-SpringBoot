@@ -17,18 +17,20 @@ public class SimulacionBaseDatos {
 
     }
 
-    public SimulacionBaseDatos(boolean bandera){
-    }
-
     //Esta clase tiene los metodos del CRUD
     public boolean save(PersonaDTO persona){
-        Persona registro = new Persona(persona);
+        if(persona == null || persona.isEmptySomething()){
+            return false;
+        }else{
+            Persona registro = new Persona(persona);
 
-        //Aqui debe de ir la validacion de la duplicidad
+            //Aqui debe de ir la validacion de la duplicidad
 
-        //Por ahora lo aregaremos sin dicha validacion
-        this.baseDatos.add(registro);
-        return true;
+            //Por ahora lo aregaremos sin dicha validacion
+            this.baseDatos.add(registro);
+            return true;
+        }
+
 
     }
 
