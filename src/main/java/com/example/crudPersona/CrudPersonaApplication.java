@@ -7,7 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CrudPersonaApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(CrudPersonaApplication.class, args);
+
+
 	}
 
 }
